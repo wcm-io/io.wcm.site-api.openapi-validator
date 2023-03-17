@@ -146,14 +146,14 @@ public final class OpenApiSpec {
   /**
    * @return Specification URL.
    */
-  public URL getURL() {
+  public @NotNull URL getURL() {
     return this.url;
   }
 
   /**
    * @return Spec version or empty string.
    */
-  public String getVersion() {
+  public @NotNull String getVersion() {
     return this.version;
   }
 

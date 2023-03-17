@@ -110,7 +110,7 @@ public final class OpenApiSpecVersions {
    * Get all Site API versions.
    * @return Versions
    */
-  public Collection<String> getAllVersions() {
+  public @NotNull Collection<String> getAllVersions() {
     return Collections.unmodifiableCollection(versions);
   }
 
