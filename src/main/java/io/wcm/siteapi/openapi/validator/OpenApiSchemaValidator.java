@@ -30,6 +30,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * Validator based on JSON schema for a path definition matching the given suffix.
+ * Use {@link OpenApiSpec} to create instances.
  */
 public final class OpenApiSchemaValidator {
 

@@ -54,6 +54,12 @@ import io.github.classgraph.ScanResult;
  * <p>
  * But you can also specify a custom path and file name pattern.
  * </p>
+ * <p>
+ * The spec versions are derived from the file names. If no version is detected in the filename (e.g.
+ * <code>site-api.yaml</code> an empty string is used as versions. Otherwise the version from the file name
+ * is returned (e.g. <code>site-api-v1.yaml</code> -&gt; <code>v1</code>). This versions reflects the
+ * "major version" of the spec with expected full backward compatibility within this version.
+ * </p>
  */
 public final class OpenApiSpecVersions {
 

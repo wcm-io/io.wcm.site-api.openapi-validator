@@ -151,14 +151,24 @@ public final class OpenApiSpec {
   }
 
   /**
-   * @return Spec version or empty string.
+   * @return Spec version (derived from file name) or empty string.
    */
   public @NotNull String getVersion() {
     return this.version;
   }
 
   /**
-   * Get Schema for default response of operation mapped to given suffix ID.
+   * Get Schema for default response of operation mapped to given suffix.
+   * <p>
+   * It looks for a path definition ending with <code>/{suffix}.json</code> in the spec
+   * and returns the JSON schema defined in the YAML for HTTP 200 GET response with <code>application/json</code>
+   * content type.
+   * </p>
+   * <p>
+   * See <a href=
+   * "https://github.com/wcm-io/io.wcm.site-api.openapi-validator/blob/develop/src/test/resources/site-api-spec/site-api.yaml">site-api.yaml</a>
+   * as minimal example for a valid specification.
+   * </p>
    * @param suffix Suffix ID
    * @return Schema JSON node
    */
@@ -168,7 +178,7 @@ public final class OpenApiSpec {
   }
 
   /**
-   * Get Schema for default response of operation mapped to given suffix ID.
+   * Get Schema for default response of operation mapped to given suffix.
    * @param suffix Suffix ID
    * @return Schema JSON node
    */
