@@ -1,0 +1,10 @@
+{
+  "MY_LINKS": {
+    "self": {
+      "NO_HREF": "/content/xyz/en.content.api/index.json"
+    }
+  },
+  "trashbin": {
+    ":path": "/content/xyz/en"
+  }
+}

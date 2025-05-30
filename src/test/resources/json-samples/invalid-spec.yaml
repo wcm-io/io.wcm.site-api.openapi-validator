@@ -1,0 +1,9 @@
+openapi: "99.0.0"
+
+info:
+  version: "1.0.0-SNAPSHOT"
+  title: "Site API Spec"
+  description: "Delivering content from AEM Sites via REST API."
+
+paths:
+

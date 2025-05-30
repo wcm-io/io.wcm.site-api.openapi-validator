@@ -1,0 +1,49 @@
+openapi: "3.0.0"
+
+info:
+  version: "2.0.0-SNAPSHOT"
+  title: "Site API Spec v2"
+  description: "Delivering content from AEM Sites via REST API."
+
+paths:
+
+  "{contentPath}.site.v1.api/index.json":
+    get:
+      summary: Entry point for Site API
+      description: Provides hypermedia links to the other parts of the API.
+      parameters:
+        - name: contentPath
+          in: path
+          description: Content page path
+          required: true
+          schema:
+            $ref: '#/components/schemas/ContentPath'
+      responses:
+        200:
+          description: Index Response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    suffix:
+                      type: string
+                    url:
+                      type: string
+                      example: "{contentPath}.site.api/{suffix}.json"
+                      description: Site API URI
+                      pattern: "^http(|s)://.+"
+                  required: ["suffix", "url"]
+                  additionalProperties: false
+
+components:
+
+  schemas:
+
+    ContentPath:
+      type: string
+      pattern: (/[^/]+)+
+      example: /content/page1
+      description: AEM content page path

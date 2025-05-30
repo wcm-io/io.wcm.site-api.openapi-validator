@@ -1,0 +1,14 @@
+[
+  {
+    "suffix": "navigation",
+    "url": "http://localhost:4502/content/siteapi-test/en.site.api/navigation.json"
+  },
+  {
+    "suffix": "content",
+    "url": "http://localhost:4502/content/siteapi-test/en.site.api/content.json"
+  },
+  {
+    "suffix": "config",
+    "url": "http://localhost:4502/content/siteapi-test/en.site.api/config.json"
+  }
+]
