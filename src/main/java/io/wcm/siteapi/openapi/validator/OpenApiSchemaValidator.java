@@ -77,8 +77,8 @@ public final class OpenApiSchemaValidator {
       return;
     }
     String message = "JSON invalid for suffix '" + suffix + "': " + validation.results().items().stream()
-        .map(ValidationItem::toString)
-        .collect(Collectors.joining("\n"));
+      .map(ValidationItem::toString)
+      .collect(Collectors.joining("\n"));
     throw new ContentValidationException(message);
   }
 

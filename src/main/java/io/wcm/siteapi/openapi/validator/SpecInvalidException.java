@@ -25,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
  * OpenAPI 3 spec cannot be read or is invalid.
  */
 public final class SpecInvalidException extends RuntimeException {
+
   private static final long serialVersionUID = 1L;
 
   /**

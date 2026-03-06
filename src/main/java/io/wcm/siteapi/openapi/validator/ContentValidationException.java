@@ -25,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
  * JSON content does not conform OpenAPI3 specification.
  */
 public final class ContentValidationException extends Exception {
+
   private static final long serialVersionUID = 1L;
 
   /**
