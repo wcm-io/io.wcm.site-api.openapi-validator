@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.junit.jupiter.api.Test;
 
 class OpenApiSpecTest {
@@ -34,7 +34,7 @@ class OpenApiSpecTest {
     OpenApiSpec underTest = new OpenApiSpec("site-api-spec/site-api.yaml", "v123");
     assertNotNull(underTest.getURL());
     assertEquals("v123", underTest.getVersion());
-    assertTrue(StringUtils.endsWith(underTest.toString(), "site-api-spec/site-api.yaml"));
+    assertTrue(Strings.CS.endsWith(underTest.toString(), "site-api-spec/site-api.yaml"));
   }
 
   @Test
