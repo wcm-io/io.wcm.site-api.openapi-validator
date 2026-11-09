@@ -98,7 +98,7 @@ public final class OpenApiSpecVersions {
     versions = new TreeSet<>(versionComparator);
     urls = new HashMap<>();
     // get all matching spec files from classpath
-    try (ScanResult scanResult = new ClassGraph().acceptPathsNonRecursive(path).scan()) {
+    try (ScanResult scanResult = new ClassGraph().enableClasspath().acceptPathsNonRecursive(path).scan()) {
       scanResult.getAllResources().forEach(resource -> {
         String filename = FilenameUtils.getName(resource.getPath());
         Matcher matcher = filenamePattern.matcher(filename);
